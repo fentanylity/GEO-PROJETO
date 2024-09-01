@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+
+#news-container {
+    margin-bottom: 20px;
+}
+
+#news-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.buttons-container {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#fact-button {
+    background-color: #4caf50;
+    color: #ffffff;
+}
+
+#fake-button {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#score-container {
+    font-size: 16px;
+}
+
+#score-container p:last-child{
+    position: absolute;
+    right: .5rem;
+    bottom: -.5rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(167, 167, 167);
+    color: white;
+    font-weight: bolder;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gradient {
+    z-index: -1;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#gradient div{
+    width: 0%;
+    transition: 1s linear;
+    opacity: 0;
+}
+
+#gradient div:first-child.trans {
+    background: linear-gradient(90deg, rgba(0,128,0,0.6), transparent 80%);
+    width: 200%;
+    opacity: 1;
+}
+
+#gradient div:last-child.trans {
+    width: 200%;
+    background: linear-gradient(-90deg, rgba(128,0,0,0.6), transparent 80%);
+    opacity: 1;
+}
+
+.atual {
+    animation: blob .5s both ease-in-out;
+}
+
+@keyframes blob {
+    from{font-size: 50% }
+    33%{font-size: 350%}
+    to{font-size: 100%}
+}
